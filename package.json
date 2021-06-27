@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "pixi.js": "^6.0.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
