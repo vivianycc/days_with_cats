@@ -1,0 +1,15 @@
+{
+  "name": "pet-game",
+  "version": "0.0.1",
+  "description": "A pet cat simulator",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Vivian",
+  "license": "ISC",
+  "dependencies": {
+    "pixi.js": "^6.0.4"
+  }
+}
