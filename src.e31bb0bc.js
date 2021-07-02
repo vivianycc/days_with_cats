@@ -50650,17 +50650,17 @@ var filters = {
 };
 exports.filters = filters;
 },{"@pixi/polyfill":"../node_modules/@pixi/polyfill/dist/esm/polyfill.js","@pixi/utils":"../node_modules/@pixi/utils/dist/esm/utils.js","@pixi/accessibility":"../node_modules/@pixi/accessibility/dist/esm/accessibility.js","@pixi/interaction":"../node_modules/@pixi/interaction/dist/esm/interaction.js","@pixi/app":"../node_modules/@pixi/app/dist/esm/app.js","@pixi/core":"../node_modules/@pixi/core/dist/esm/core.js","@pixi/extract":"../node_modules/@pixi/extract/dist/esm/extract.js","@pixi/loaders":"../node_modules/@pixi/loaders/dist/esm/loaders.js","@pixi/compressed-textures":"../node_modules/@pixi/compressed-textures/dist/esm/compressed-textures.js","@pixi/particles":"../node_modules/@pixi/particles/dist/esm/particles.js","@pixi/prepare":"../node_modules/@pixi/prepare/dist/esm/prepare.js","@pixi/spritesheet":"../node_modules/@pixi/spritesheet/dist/esm/spritesheet.js","@pixi/sprite-tiling":"../node_modules/@pixi/sprite-tiling/dist/esm/sprite-tiling.js","@pixi/text-bitmap":"../node_modules/@pixi/text-bitmap/dist/esm/text-bitmap.js","@pixi/ticker":"../node_modules/@pixi/ticker/dist/esm/ticker.js","@pixi/filter-alpha":"../node_modules/@pixi/filter-alpha/dist/esm/filter-alpha.js","@pixi/filter-blur":"../node_modules/@pixi/filter-blur/dist/esm/filter-blur.js","@pixi/filter-color-matrix":"../node_modules/@pixi/filter-color-matrix/dist/esm/filter-color-matrix.js","@pixi/filter-displacement":"../node_modules/@pixi/filter-displacement/dist/esm/filter-displacement.js","@pixi/filter-fxaa":"../node_modules/@pixi/filter-fxaa/dist/esm/filter-fxaa.js","@pixi/filter-noise":"../node_modules/@pixi/filter-noise/dist/esm/filter-noise.js","@pixi/mixin-cache-as-bitmap":"../node_modules/@pixi/mixin-cache-as-bitmap/dist/esm/mixin-cache-as-bitmap.js","@pixi/mixin-get-child-by-name":"../node_modules/@pixi/mixin-get-child-by-name/dist/esm/mixin-get-child-by-name.js","@pixi/mixin-get-global-position":"../node_modules/@pixi/mixin-get-global-position/dist/esm/mixin-get-global-position.js","@pixi/constants":"../node_modules/@pixi/constants/dist/esm/constants.js","@pixi/display":"../node_modules/@pixi/display/dist/esm/display.js","@pixi/graphics":"../node_modules/@pixi/graphics/dist/esm/graphics.js","@pixi/math":"../node_modules/@pixi/math/dist/esm/math.js","@pixi/mesh":"../node_modules/@pixi/mesh/dist/esm/mesh.js","@pixi/mesh-extras":"../node_modules/@pixi/mesh-extras/dist/esm/mesh-extras.js","@pixi/runner":"../node_modules/@pixi/runner/dist/esm/runner.js","@pixi/sprite":"../node_modules/@pixi/sprite/dist/esm/sprite.js","@pixi/sprite-animated":"../node_modules/@pixi/sprite-animated/dist/esm/sprite-animated.js","@pixi/text":"../node_modules/@pixi/text/dist/esm/text.js","@pixi/settings":"../node_modules/@pixi/settings/dist/esm/settings.js"}],"assets/cat-running.png":[function(require,module,exports) {
-module.exports = "/cat-running.515b64a6.png";
+module.exports = "cat-running.515b64a6.png";
 },{}],"assets/cat-sleeping.png":[function(require,module,exports) {
-module.exports = "/cat-sleeping.eb59eb15.png";
+module.exports = "cat-sleeping.eb59eb15.png";
 },{}],"assets/cat-standing.png":[function(require,module,exports) {
-module.exports = "/cat-standing.d3f8cd38.png";
+module.exports = "cat-standing.d3f8cd38.png";
 },{}],"assets/cat-tilt-head.png":[function(require,module,exports) {
-module.exports = "/cat-tilt-head.58e8e9e1.png";
+module.exports = "cat-tilt-head.58e8e9e1.png";
 },{}],"assets/cat-begging.png":[function(require,module,exports) {
-module.exports = "/cat-begging.e0d49460.png";
+module.exports = "cat-begging.e0d49460.png";
 },{}],"assets/cat-bathing.png":[function(require,module,exports) {
-module.exports = "/cat-bathing.e5c14009.png";
+module.exports = "cat-bathing.e5c14009.png";
 },{}],"assets/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -50835,7 +50835,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59553" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61083" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -51012,4 +51012,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+//# sourceMappingURL=src.e31bb0bc.js.map
