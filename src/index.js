@@ -6,8 +6,11 @@ import {
   Texture,
   Graphics,
   Text,
+  Sprite,
+  State,
 } from "pixi.js";
-import { Cat } from "./assets";
+import { machine, transition } from "./machine";
+import { createTimer } from "./timer";
 
 let type = "WebGL";
 if (!utils.isWebGLSupported()) {
@@ -18,8 +21,8 @@ utils.sayHello(type);
 
 //Create a Pixi Application
 let app = new Application({
-  width: 800, // default: 800
-  height: 360, // default: 600
+  width: 1280, // default: 800
+  height: 720, // default: 600
   antialias: true, // default: false
   backgroundAlpha: 1,
   resolution: 1, // default: 1
@@ -42,89 +45,132 @@ loader.onLoad.add((loader, resource) => {
   //console.log("loading: " + resource.name);
 });
 
-loader.add("assets/nekonin.json").load(onAssetsLoaded);
+loader
+  .add("assets/sit_to_sleep.json")
+  .add("assets/walk_sit.json")
+  .add("assets/cat-standing.png")
+  .add("assets/cat-walk-left.png")
+  .add("assets/cat-walk-right.png")
+  .add("assets/cat-sleeping.png")
+  .add("assets/cat-bathing.png")
+  .add("assets/bg-1.jpg")
+  .load(onAssetsLoaded);
 
-let nekonin;
+let cat, cat_sitting, cat_walk_left, cat_walk_right, cat_sleeping;
+let direction = 5;
 
 function onAssetsLoaded(e, r) {
-  let sheet = Loader.shared.resources["assets/nekonin.json"].spritesheet;
+  let walk_sit_sheet =
+    Loader.shared.resources["assets/walk_sit.json"].spritesheet;
+  let sit_sleep_sheet =
+    Loader.shared.resources["assets/sit_to_sleep.json"].spritesheet;
+  cat_sitting = Loader.shared.resources["assets/cat-standing.png"].texture;
+  cat_walk_left = Loader.shared.resources["assets/cat-walk-left.png"].texture;
+  cat_walk_right = Loader.shared.resources["assets/cat-walk-right.png"].texture;
+  cat_sleeping = Loader.shared.resources["assets/cat-sleeping.png"].texture;
+  cat = new Sprite(cat_sitting);
 
-  nekonin = new AnimatedSprite(sheet.animations["nekonin-left"]);
+  let bg = new Sprite(Loader.shared.resources["assets/bg-1.jpg"].texture);
 
-  nekonin.x = app.screen.width / 2;
-  nekonin.y = app.screen.height / 2;
-  nekonin.width = 80;
-  nekonin.height = 80;
-  nekonin.anchor.set(0.5);
-  nekonin.animationSpeed = 0.1;
-  nekonin.play();
+  cat.animationSpeed = 0.08;
+  cat.x = app.screen.width / 2;
+  cat.y = 480;
+  cat.anchor.set(0.5);
+  cat.width = 200;
+  cat.height = 200;
 
-  app.stage.addChild(nekonin);
+  // cat.on("pointerdown", () => {
+  //   state = flying;
+  // });
+  bg.x = app.screen.width / 2;
+  bg.y = app.screen.height / 2;
+  bg.anchor.set(0.5);
+  bg.width = app.screen.width;
+  bg.height = app.screen.height;
 
-  let button3 = createButton(
-    3,
-    app.screen.width - 40,
-    app.screen.height - 40,
-    "3"
-  );
-  let button2 = createButton(
-    2,
-    app.screen.width - 96,
-    app.screen.height - 40,
-    "2"
-  );
-  let button1 = createButton(
-    1,
-    app.screen.width - 152,
-    app.screen.height - 40,
-    "1"
-  );
-  app.stage.addChild(button1, button2, button3);
+  app.stage.addChild(bg, cat);
+  // app.ticker.add(() => {
+  //   cat.x += direction;
 
-  let direction = -1;
-  // Animate the rotation
-  app.ticker.add(() => {
-    nekonin.x += direction;
-
-    if (nekonin.x == app.screen.width) {
-      direction = -1;
-    }
-    if (nekonin.x == 0) {
-      direction = 1;
-    }
-  });
+  //   if (cat.x == app.screen.width) {
+  //     direction = -1;
+  //   }
+  //   if (cat.x == 0) {
+  //     direction = 1;
+  //   }
+  // });
+  app.ticker.add((delta) => gameLoop(delta));
 }
 
-// const cat_bathing = PIXI.Sprite.from("./img/cat-begging.png");
-// app.stage.addChild(cat_bathing);
-function createButton(id, x, y, label) {
-  let button = new Graphics();
-  button.lineStyle(1, 0xffffff, 1);
-  button.beginFill(0xffffff, 0.25);
-  button.drawCircle(x, y, 24);
-  button.endFill();
+// function sendEvent(event) {
+//   let nextState = transition(currentState, event);
+//   currentState = nextState;
+//   console.log(currentState);
+// }
 
-  let text = new Text(`${label}`);
-  text.anchor.set(0.5);
-  text.x = x;
-  text.y = y;
-  text.style = { fill: 0xffffff };
+// window.sendEvent = sendEvent;
 
-  button.interactive = true;
-  button.buttonMode = true;
-  button.addChild(text);
-  button.on("pointerdown", () => changeState(id));
-  return button;
+let currentState = machine.initial;
+let timer = createTimer();
+function gameLoop(delta) {
+  timer.tick();
+  checkTime(timer.getTime());
+  UIStates[currentState]();
 }
 
-function changeState(buttonId) {
-  let sheet = Loader.shared.resources["assets/nekonin.json"].spritesheet;
-  if (buttonId == 1) {
-    nekonin.textures = sheet.animations["nekonin-left"];
-  } else if (buttonId == 2) {
-    nekonin.textures = sheet.animations["nekonin-front"];
-  } else if (buttonId == 3) {
-    nekonin.textures = sheet.animations["nekonin-right"];
+// function walking() {
+//   let direction = -1;
+//   cat.x += direction;
+
+//   if (cat.x == app.screen.width) {
+//     direction = -1;
+//   }
+//   if (cat.x == 0) {
+//     direction = 1;
+//   }
+// }
+
+function checkTime(time) {
+  console.log(time);
+  if (time === 10) {
+    currentState = transition(currentState, "TIME_TO_WALK");
+  } else if (time === 500) {
+    currentState = transition(currentState, "TIME_TO_SIT");
+  } else if (time === 600) {
+    currentState = transition(currentState, "TIME_TO_SLEEP");
+  } else if (time === 900) {
+    currentState = transition(currentState, "TIME_TO_WAKEUP");
+  } else if (time > 1000) {
+    timer.reset();
   }
-  nekonin.play();
+  console.log(currentState);
 }
+
+const UIStates = {
+  walking: () => {
+    console.log("walking now!");
+    if (direction > 0) {
+      cat.texture = cat_walk_right;
+    } else {
+      cat.texture = cat_walk_left;
+    }
+
+    if (cat.x == 0 || cat.x < 0) {
+      direction = 5;
+    }
+    if (cat.x == app.screen.width || cat.x > app.screen.width) {
+      direction = -5;
+    }
+    cat.x += direction;
+  },
+  sleeping: () => {
+    cat.texture = cat_sleeping;
+    cat.x = cat.x;
+    cat.y = cat.y;
+    console.log("sleeping now!");
+  },
+  idle: () => {
+    cat.texture = cat_sitting;
+    console.log("sitting now!");
+  },
+};
