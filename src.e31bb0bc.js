@@ -50649,61 +50649,101 @@ var filters = {
   NoiseFilter: _filterNoise.NoiseFilter
 };
 exports.filters = filters;
-},{"@pixi/polyfill":"../node_modules/@pixi/polyfill/dist/esm/polyfill.js","@pixi/utils":"../node_modules/@pixi/utils/dist/esm/utils.js","@pixi/accessibility":"../node_modules/@pixi/accessibility/dist/esm/accessibility.js","@pixi/interaction":"../node_modules/@pixi/interaction/dist/esm/interaction.js","@pixi/app":"../node_modules/@pixi/app/dist/esm/app.js","@pixi/core":"../node_modules/@pixi/core/dist/esm/core.js","@pixi/extract":"../node_modules/@pixi/extract/dist/esm/extract.js","@pixi/loaders":"../node_modules/@pixi/loaders/dist/esm/loaders.js","@pixi/compressed-textures":"../node_modules/@pixi/compressed-textures/dist/esm/compressed-textures.js","@pixi/particles":"../node_modules/@pixi/particles/dist/esm/particles.js","@pixi/prepare":"../node_modules/@pixi/prepare/dist/esm/prepare.js","@pixi/spritesheet":"../node_modules/@pixi/spritesheet/dist/esm/spritesheet.js","@pixi/sprite-tiling":"../node_modules/@pixi/sprite-tiling/dist/esm/sprite-tiling.js","@pixi/text-bitmap":"../node_modules/@pixi/text-bitmap/dist/esm/text-bitmap.js","@pixi/ticker":"../node_modules/@pixi/ticker/dist/esm/ticker.js","@pixi/filter-alpha":"../node_modules/@pixi/filter-alpha/dist/esm/filter-alpha.js","@pixi/filter-blur":"../node_modules/@pixi/filter-blur/dist/esm/filter-blur.js","@pixi/filter-color-matrix":"../node_modules/@pixi/filter-color-matrix/dist/esm/filter-color-matrix.js","@pixi/filter-displacement":"../node_modules/@pixi/filter-displacement/dist/esm/filter-displacement.js","@pixi/filter-fxaa":"../node_modules/@pixi/filter-fxaa/dist/esm/filter-fxaa.js","@pixi/filter-noise":"../node_modules/@pixi/filter-noise/dist/esm/filter-noise.js","@pixi/mixin-cache-as-bitmap":"../node_modules/@pixi/mixin-cache-as-bitmap/dist/esm/mixin-cache-as-bitmap.js","@pixi/mixin-get-child-by-name":"../node_modules/@pixi/mixin-get-child-by-name/dist/esm/mixin-get-child-by-name.js","@pixi/mixin-get-global-position":"../node_modules/@pixi/mixin-get-global-position/dist/esm/mixin-get-global-position.js","@pixi/constants":"../node_modules/@pixi/constants/dist/esm/constants.js","@pixi/display":"../node_modules/@pixi/display/dist/esm/display.js","@pixi/graphics":"../node_modules/@pixi/graphics/dist/esm/graphics.js","@pixi/math":"../node_modules/@pixi/math/dist/esm/math.js","@pixi/mesh":"../node_modules/@pixi/mesh/dist/esm/mesh.js","@pixi/mesh-extras":"../node_modules/@pixi/mesh-extras/dist/esm/mesh-extras.js","@pixi/runner":"../node_modules/@pixi/runner/dist/esm/runner.js","@pixi/sprite":"../node_modules/@pixi/sprite/dist/esm/sprite.js","@pixi/sprite-animated":"../node_modules/@pixi/sprite-animated/dist/esm/sprite-animated.js","@pixi/text":"../node_modules/@pixi/text/dist/esm/text.js","@pixi/settings":"../node_modules/@pixi/settings/dist/esm/settings.js"}],"assets/cat-running.png":[function(require,module,exports) {
-module.exports = "cat-running.515b64a6.png";
-},{}],"assets/cat-sleeping.png":[function(require,module,exports) {
-module.exports = "cat-sleeping.eb59eb15.png";
-},{}],"assets/cat-standing.png":[function(require,module,exports) {
-module.exports = "cat-standing.d3f8cd38.png";
-},{}],"assets/cat-tilt-head.png":[function(require,module,exports) {
-module.exports = "cat-tilt-head.58e8e9e1.png";
-},{}],"assets/cat-begging.png":[function(require,module,exports) {
-module.exports = "cat-begging.e0d49460.png";
-},{}],"assets/cat-bathing.png":[function(require,module,exports) {
-module.exports = "cat-bathing.e5c14009.png";
-},{}],"assets/index.js":[function(require,module,exports) {
+},{"@pixi/polyfill":"../node_modules/@pixi/polyfill/dist/esm/polyfill.js","@pixi/utils":"../node_modules/@pixi/utils/dist/esm/utils.js","@pixi/accessibility":"../node_modules/@pixi/accessibility/dist/esm/accessibility.js","@pixi/interaction":"../node_modules/@pixi/interaction/dist/esm/interaction.js","@pixi/app":"../node_modules/@pixi/app/dist/esm/app.js","@pixi/core":"../node_modules/@pixi/core/dist/esm/core.js","@pixi/extract":"../node_modules/@pixi/extract/dist/esm/extract.js","@pixi/loaders":"../node_modules/@pixi/loaders/dist/esm/loaders.js","@pixi/compressed-textures":"../node_modules/@pixi/compressed-textures/dist/esm/compressed-textures.js","@pixi/particles":"../node_modules/@pixi/particles/dist/esm/particles.js","@pixi/prepare":"../node_modules/@pixi/prepare/dist/esm/prepare.js","@pixi/spritesheet":"../node_modules/@pixi/spritesheet/dist/esm/spritesheet.js","@pixi/sprite-tiling":"../node_modules/@pixi/sprite-tiling/dist/esm/sprite-tiling.js","@pixi/text-bitmap":"../node_modules/@pixi/text-bitmap/dist/esm/text-bitmap.js","@pixi/ticker":"../node_modules/@pixi/ticker/dist/esm/ticker.js","@pixi/filter-alpha":"../node_modules/@pixi/filter-alpha/dist/esm/filter-alpha.js","@pixi/filter-blur":"../node_modules/@pixi/filter-blur/dist/esm/filter-blur.js","@pixi/filter-color-matrix":"../node_modules/@pixi/filter-color-matrix/dist/esm/filter-color-matrix.js","@pixi/filter-displacement":"../node_modules/@pixi/filter-displacement/dist/esm/filter-displacement.js","@pixi/filter-fxaa":"../node_modules/@pixi/filter-fxaa/dist/esm/filter-fxaa.js","@pixi/filter-noise":"../node_modules/@pixi/filter-noise/dist/esm/filter-noise.js","@pixi/mixin-cache-as-bitmap":"../node_modules/@pixi/mixin-cache-as-bitmap/dist/esm/mixin-cache-as-bitmap.js","@pixi/mixin-get-child-by-name":"../node_modules/@pixi/mixin-get-child-by-name/dist/esm/mixin-get-child-by-name.js","@pixi/mixin-get-global-position":"../node_modules/@pixi/mixin-get-global-position/dist/esm/mixin-get-global-position.js","@pixi/constants":"../node_modules/@pixi/constants/dist/esm/constants.js","@pixi/display":"../node_modules/@pixi/display/dist/esm/display.js","@pixi/graphics":"../node_modules/@pixi/graphics/dist/esm/graphics.js","@pixi/math":"../node_modules/@pixi/math/dist/esm/math.js","@pixi/mesh":"../node_modules/@pixi/mesh/dist/esm/mesh.js","@pixi/mesh-extras":"../node_modules/@pixi/mesh-extras/dist/esm/mesh-extras.js","@pixi/runner":"../node_modules/@pixi/runner/dist/esm/runner.js","@pixi/sprite":"../node_modules/@pixi/sprite/dist/esm/sprite.js","@pixi/sprite-animated":"../node_modules/@pixi/sprite-animated/dist/esm/sprite-animated.js","@pixi/text":"../node_modules/@pixi/text/dist/esm/text.js","@pixi/settings":"../node_modules/@pixi/settings/dist/esm/settings.js"}],"machine.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Cat = void 0;
-
-var _catRunning = _interopRequireDefault(require("./cat-running.png"));
-
-var _catSleeping = _interopRequireDefault(require("./cat-sleeping.png"));
-
-var _catStanding = _interopRequireDefault(require("./cat-standing.png"));
-
-var _catTiltHead = _interopRequireDefault(require("./cat-tilt-head.png"));
-
-var _catBegging = _interopRequireDefault(require("./cat-begging.png"));
-
-var _catBathing = _interopRequireDefault(require("./cat-bathing.png"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Cat = {
-  running: _catRunning.default,
-  sleeping: _catSleeping.default,
-  standing: _catStanding.default,
-  tilthead: _catTiltHead.default,
-  begging: _catBegging.default,
-  bathing: _catBathing.default // running: "https://i.imgur.com/lBvFhjW.png",
-  // sleeping: "https://i.imgur.com/jieWhho.png",
-  // standing: "https://i.imgur.com/jieWhho.png",
-  // tilthead: "https://i.imgur.com/gvyUiZs.png",
-  // begging: "https://i.imgur.com/L3eWRJF.png",
-  // bathing: "https://i.imgur.com/wXBWU1h.png",
-
+exports.transition = transition;
+exports.machine = void 0;
+var machine = {
+  initial: "idle",
+  states: {
+    idle: {
+      on: {
+        TIME_TO_EAT: "hungry",
+        TIME_TO_SLEEP: "sleeping",
+        TIME_TO_WALK: "walking",
+        PET: "beingpetted"
+      }
+    },
+    sleeping: {
+      on: {
+        TIME_TO_WAKEUP: "idle"
+      }
+    },
+    hungry: {
+      on: {
+        FEED: "idle",
+        STARVE: "sick"
+      }
+    },
+    walking: {
+      on: {
+        TIME_TO_SIT: "idle"
+      }
+    },
+    beingpetted: {
+      on: {
+        PISSED: "angry",
+        HAPPY: "happy"
+      }
+    },
+    sick: {
+      on: {
+        FEED: "hungry"
+      }
+    },
+    angry: {
+      on: {
+        IDLE: "idle"
+      }
+    }
+  }
 };
-exports.Cat = Cat;
-},{"./cat-running.png":"assets/cat-running.png","./cat-sleeping.png":"assets/cat-sleeping.png","./cat-standing.png":"assets/cat-standing.png","./cat-tilt-head.png":"assets/cat-tilt-head.png","./cat-begging.png":"assets/cat-begging.png","./cat-bathing.png":"assets/cat-bathing.png"}],"index.js":[function(require,module,exports) {
+exports.machine = machine;
+
+function transition(state, event) {
+  return machine.states[state].on[event] || state;
+}
+},{}],"timer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createTimer = createTimer;
+
+function createTimer() {
+  var time = 0;
+
+  function tick() {
+    time = time + 1; // console.log(time);
+  }
+
+  function reset() {
+    time = 0;
+  }
+
+  function getTime() {
+    return time;
+  }
+
+  return {
+    tick: tick,
+    reset: reset,
+    getTime: getTime
+  };
+}
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _pixi = require("pixi.js");
 
-var _assets = require("./assets");
+var _machine = require("./machine");
+
+var _timer = require("./timer");
 
 var type = "WebGL";
 
@@ -50715,9 +50755,9 @@ _pixi.utils.sayHello(type); //Create a Pixi Application
 
 
 var app = new _pixi.Application({
-  width: 800,
+  width: 1280,
   // default: 800
-  height: 360,
+  height: 720,
   // default: 600
   antialias: true,
   // default: false
@@ -50737,77 +50777,123 @@ loader.onLoad.add(function (loader, resource) {
   //of the `add` method, you can access them like this
   //console.log("loading: " + resource.name);
 });
-loader.add("assets/nekonin.json").load(onAssetsLoaded);
-var nekonin;
+loader // .add("assets/sit_to_sleep.json")
+// .add("assets/walk_sit.json")
+.add("assets/cat-standing.png").add("assets/cat-walk-left.png").add("assets/cat-walk-right.png").add("assets/cat-sleeping.png").add("assets/cat-bathing.png").add("assets/bg-1.jpg").load(onAssetsLoaded);
+var cat, cat_sitting, cat_walk_left, cat_walk_right, cat_sleeping;
+var direction = 5;
 
 function onAssetsLoaded(e, r) {
-  var sheet = _pixi.Loader.shared.resources["assets/nekonin.json"].spritesheet;
-  nekonin = new _pixi.AnimatedSprite(sheet.animations["nekonin-left"]);
-  nekonin.x = app.screen.width / 2;
-  nekonin.y = app.screen.height / 2;
-  nekonin.width = 80;
-  nekonin.height = 80;
-  nekonin.anchor.set(0.5);
-  nekonin.animationSpeed = 0.1;
-  nekonin.play();
-  app.stage.addChild(nekonin);
-  var button3 = createButton(3, app.screen.width - 40, app.screen.height - 40, "3");
-  var button2 = createButton(2, app.screen.width - 96, app.screen.height - 40, "2");
-  var button1 = createButton(1, app.screen.width - 152, app.screen.height - 40, "1");
-  app.stage.addChild(button1, button2, button3);
-  var direction = -1; // Animate the rotation
+  cat_sitting = _pixi.Loader.shared.resources["assets/cat-standing.png"].texture;
+  cat_walk_left = _pixi.Loader.shared.resources["assets/cat-walk-left.png"].texture;
+  cat_walk_right = _pixi.Loader.shared.resources["assets/cat-walk-right.png"].texture;
+  cat_sleeping = _pixi.Loader.shared.resources["assets/cat-sleeping.png"].texture;
+  cat = new _pixi.Sprite(cat_sitting);
+  var bg = new _pixi.Sprite(_pixi.Loader.shared.resources["assets/bg-1.jpg"].texture);
+  cat.animationSpeed = 0.08;
+  cat.x = app.screen.width / 2;
+  cat.y = 480;
+  cat.anchor.set(0.5);
+  cat.width = 200;
+  cat.height = 200; // cat.on("pointerdown", () => {
+  //   state = flying;
+  // });
 
-  app.ticker.add(function () {
-    nekonin.x += direction;
+  bg.x = app.screen.width / 2;
+  bg.y = app.screen.height / 2;
+  bg.anchor.set(0.5);
+  bg.width = app.screen.width;
+  bg.height = app.screen.height;
+  app.stage.addChild(bg, cat); // app.ticker.add(() => {
+  //   cat.x += direction;
+  //   if (cat.x == app.screen.width) {
+  //     direction = -1;
+  //   }
+  //   if (cat.x == 0) {
+  //     direction = 1;
+  //   }
+  // });
 
-    if (nekonin.x == app.screen.width) {
-      direction = -1;
-    }
-
-    if (nekonin.x == 0) {
-      direction = 1;
-    }
+  app.ticker.add(function (delta) {
+    return gameLoop(delta);
   });
-} // const cat_bathing = PIXI.Sprite.from("./img/cat-begging.png");
-// app.stage.addChild(cat_bathing);
+} // function sendEvent(event) {
+//   let nextState = transition(currentState, event);
+//   currentState = nextState;
+//   console.log(currentState);
+// }
+// window.sendEvent = sendEvent;
 
 
-function createButton(id, x, y, label) {
-  var button = new _pixi.Graphics();
-  button.lineStyle(1, 0xffffff, 1);
-  button.beginFill(0xffffff, 0.25);
-  button.drawCircle(x, y, 24);
-  button.endFill();
-  var text = new _pixi.Text("".concat(label));
-  text.anchor.set(0.5);
-  text.x = x;
-  text.y = y;
-  text.style = {
-    fill: 0xffffff
-  };
-  button.interactive = true;
-  button.buttonMode = true;
-  button.addChild(text);
-  button.on("pointerdown", function () {
-    return changeState(id);
-  });
-  return button;
-}
+var currentState = _machine.machine.initial;
+var timer = (0, _timer.createTimer)();
 
-function changeState(buttonId) {
-  var sheet = _pixi.Loader.shared.resources["assets/nekonin.json"].spritesheet;
+function gameLoop(delta) {
+  timer.tick();
+  checkTime(timer.getTime());
+  UIStates[currentState]();
+} // function walking() {
+//   let direction = -1;
+//   cat.x += direction;
+//   if (cat.x == app.screen.width) {
+//     direction = -1;
+//   }
+//   if (cat.x == 0) {
+//     direction = 1;
+//   }
+// }
 
-  if (buttonId == 1) {
-    nekonin.textures = sheet.animations["nekonin-left"];
-  } else if (buttonId == 2) {
-    nekonin.textures = sheet.animations["nekonin-front"];
-  } else if (buttonId == 3) {
-    nekonin.textures = sheet.animations["nekonin-right"];
+
+function checkTime(time) {
+  console.log(time);
+
+  if (time === 10) {
+    currentState = (0, _machine.transition)(currentState, "TIME_TO_WALK");
+  } else if (time === 500) {
+    currentState = (0, _machine.transition)(currentState, "TIME_TO_SIT");
+  } else if (time === 600) {
+    currentState = (0, _machine.transition)(currentState, "TIME_TO_SLEEP");
+  } else if (time === 900) {
+    currentState = (0, _machine.transition)(currentState, "TIME_TO_WAKEUP");
+  } else if (time > 1000) {
+    timer.reset();
   }
 
-  nekonin.play();
+  console.log(currentState);
 }
-},{"pixi.js":"../node_modules/pixi.js/dist/esm/pixi.js","./assets":"assets/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+var UIStates = {
+  walking: function walking() {
+    console.log("walking now!");
+
+    if (direction > 0) {
+      cat.texture = cat_walk_right;
+    } else {
+      cat.texture = cat_walk_left;
+    }
+
+    if (cat.x == 0 || cat.x < 0) {
+      direction = 5;
+    }
+
+    if (cat.x == app.screen.width || cat.x > app.screen.width) {
+      direction = -5;
+    }
+
+    cat.x += direction;
+  },
+  sleeping: function sleeping() {
+    cat.texture = cat_sleeping;
+    cat.x = cat.x;
+    cat.y = cat.y;
+    console.log("sleeping now!");
+  },
+  idle: function idle() {
+    cat.texture = cat_sitting;
+    console.log("sitting now!");
+  }
+};
+},{"pixi.js":"../node_modules/pixi.js/dist/esm/pixi.js","./machine":"machine.js","./timer":"timer.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -50835,7 +50921,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61083" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57682" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
